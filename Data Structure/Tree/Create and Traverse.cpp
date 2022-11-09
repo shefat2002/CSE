@@ -60,6 +60,16 @@ void pre_order(Node* node)
     cout << node -> data;
 }
 
+void in_order(Node* node)
+{
+    if(node -> left != NULL)
+        pre_order(node ->left);
+    cout << node -> data;
+    if(node -> right != NULL)
+        pre_order(node ->right);
+    
+}
+
 int main()
 {
     Node* root = create_tree();
